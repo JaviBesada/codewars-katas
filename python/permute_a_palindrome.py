@@ -8,8 +8,4 @@ def permute_a_palindrome(palabra):
         if veces % 2 == 1:
             impares += 1
             
-    if impares <= 1:   
-        return True
-        
-    else:
-        return False
+    return impares <= 1
