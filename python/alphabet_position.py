@@ -1,10 +1,8 @@
+import string
+
 def alphabet_position(text):
-    
-    import string
-    
-    alphabetPositions = ""
-    for character in text.lower().replace(" ",""):
-        if character not in (string.punctuation + string.digits):
-            alphabetPositions += str(string.ascii_lowercase.index(character) + 1) + " "
-            
-    return alphabetPositions.rstrip()
+    posiciones = []
+    for caracter in text.lower():
+        if caracter in string.ascii_lowercase:
+            posiciones.append(str(string.ascii_lowercase.index(caracter) + 1))
+    return " ".join(posiciones)
