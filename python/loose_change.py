@@ -16,9 +16,9 @@ def loose_change(cents):
     if cents == 0 or cents < 0:
         return monedas
 
-    resto = int(cents)          # Aqui hacemos una variable resto que inicie con cents.   
+    resto = int(cents)          # Aqui hacemos una variable resto que inicie con cents, y lo convertimos a int.  
 
-    valores = valores.items()   # Usamos .item para poder iterar sobre cada valor, sino con el diccionario no deja.
+    valores = valores.items()   # Usamos .items para poder iterar sobre cada valor, sino con el diccionario no deja, porque solo nos deja recorrer las claves, y asi nos da pares (nombre, valor) que si podemos reccorrer.
     
     for nombre, valor in valores:
         monedas[nombre] = resto // valor    # Añadimos la division entera entre resto(que son los cents que nos quedan) y valor(que es el valor de cada 1)
